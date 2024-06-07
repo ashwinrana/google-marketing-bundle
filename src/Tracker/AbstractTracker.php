@@ -31,9 +31,6 @@ abstract class AbstractTracker implements TrackerInterface
         $this->siteIdProvider = $siteIdProvider;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function generateCode(SiteId $siteId = null): ?string
     {
         if (null === $siteId) {
@@ -46,15 +43,10 @@ abstract class AbstractTracker implements TrackerInterface
     /**
      * Generates code for a specific site config
      *
-     * @param SiteId $siteId
      *
-     * @return string|null
      */
     abstract protected function buildCode(SiteId $siteId): ?string;
 
-    /**
-     * {@inheritdoc}
-     */
     public function addCodePart(string $code, string $block = null, bool $prepend = false, SiteId $siteId = null): void
     {
         $action = $prepend ? CodeCollector::ACTION_PREPEND : CodeCollector::ACTION_APPEND;
@@ -65,7 +57,6 @@ abstract class AbstractTracker implements TrackerInterface
     /**
      * Lazy initialize the code collector
      *
-     * @return CodeCollector
      */
     protected function getCodeCollector(): CodeCollector
     {
@@ -80,7 +71,6 @@ abstract class AbstractTracker implements TrackerInterface
      * Builds the code collector which allows to add additional content to
      * specific blocks.
      *
-     * @return CodeCollector
      */
     abstract protected function buildCodeCollector(): CodeCollector;
 }

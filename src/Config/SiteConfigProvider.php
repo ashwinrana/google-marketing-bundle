@@ -35,11 +35,6 @@ class SiteConfigProvider
         $this->configProvider = $configProvider;
     }
 
-    /**
-     * @param Site|null $site
-     *
-     * @return array|null
-     */
     public function getSiteConfig(Site $site = null): ?array
     {
         $siteId = $this->getSiteId($site);

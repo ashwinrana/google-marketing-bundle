@@ -62,9 +62,7 @@ class AnalyticsController extends ReportsControllerBase implements KernelControl
     /**
      * @Route("/get-profiles", name="pimcore_bundle_googlemarketing_reports_analytics_getprofiles", methods={"GET"})
      *
-     * @param Request $request
      *
-     * @return JsonResponse
      */
     public function getProfilesAction(Request $request): JsonResponse
     {
@@ -150,10 +148,7 @@ class AnalyticsController extends ReportsControllerBase implements KernelControl
     /**
      * @Route("/chartmetricdata", name="pimcore_bundle_googlemarketing_reports_analytics_chartmetricdata", methods={"GET"})
      *
-     * @param Request $request
-     * @param SiteConfigProvider $siteConfigProvider
      *
-     * @return JsonResponse
      */
     public function chartmetricdataAction(Request $request, SiteConfigProvider $siteConfigProvider): JsonResponse
     {
@@ -233,10 +228,7 @@ class AnalyticsController extends ReportsControllerBase implements KernelControl
     /**
      * @Route("/summary", name="pimcore_bundle_googlemarketing_reports_analytics_summary", methods={"GET"})
      *
-     * @param Request $request
-     * @param SiteConfigProvider $siteConfigProvider
      *
-     * @return JsonResponse
      */
     public function summaryAction(Request $request, SiteConfigProvider $siteConfigProvider): JsonResponse
     {
@@ -311,10 +303,7 @@ class AnalyticsController extends ReportsControllerBase implements KernelControl
     /**
      * @Route("/source", name="pimcore_bundle_googlemarketing_reports_analytics_source", methods={"GET"})
      *
-     * @param Request $request
-     * @param SiteConfigProvider $siteConfigProvider
      *
-     * @return JsonResponse
      */
     public function sourceAction(Request $request, SiteConfigProvider $siteConfigProvider): JsonResponse
     {
@@ -365,10 +354,7 @@ class AnalyticsController extends ReportsControllerBase implements KernelControl
     /**
      * @Route("/data-explorer", name="pimcore_bundle_googlemarketing_reports_analytics_dataexplorer", methods={"GET", "POST"})
      *
-     * @param Request $request
-     * @param SiteConfigProvider $siteConfigProvider
      *
-     * @return JsonResponse
      */
     public function dataExplorerAction(Request $request, SiteConfigProvider $siteConfigProvider): JsonResponse
     {
@@ -436,9 +422,7 @@ class AnalyticsController extends ReportsControllerBase implements KernelControl
     /**
      * @Route("/get-dimensions", name="pimcore_bundle_googlemarketing_reports_analytics_getdimensions", methods={"GET"})
      *
-     * @param Request $request
      *
-     * @return JsonResponse
      */
     public function getDimensionsAction(Request $request): JsonResponse
     {
@@ -448,9 +432,7 @@ class AnalyticsController extends ReportsControllerBase implements KernelControl
     /**
      * @Route("/get-metrics", name="pimcore_bundle_googlemarketing_reports_analytics_getmetrics", methods={"GET"})
      *
-     * @param Request $request
      *
-     * @return JsonResponse
      */
     public function getMetricsAction(Request $request): JsonResponse
     {
@@ -460,9 +442,7 @@ class AnalyticsController extends ReportsControllerBase implements KernelControl
     /**
      * @Route("/get-segments", name="pimcore_bundle_googlemarketing_reports_analytics_getsegments", methods={"GET"})
      *
-     * @param Request $request
      *
-     * @return JsonResponse
      */
     public function getSegmentsAction(Request $request): JsonResponse
     {

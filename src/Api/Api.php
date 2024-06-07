@@ -67,7 +67,6 @@ class Api
     }
 
     /**
-     * @param string $type
      *
      * @return Client|false returns false, if client not configured
      */
@@ -81,7 +80,6 @@ class Api
     }
 
     /**
-     * @param array|null $scope
      *
      * @return Client|false
      */
@@ -158,7 +156,6 @@ class Api
     }
 
     /**
-     * @return array
      *
      * @throws \Exception
      */
@@ -168,7 +165,6 @@ class Api
     }
 
     /**
-     * @return array
      *
      * @throws \Exception
      */
@@ -178,7 +174,6 @@ class Api
     }
 
     /**
-     * @return mixed
      *
      * @throws \Exception
      * @throws \Exception
@@ -192,9 +187,7 @@ class Api
     }
 
     /**
-     * @param string $type
      *
-     * @return array
      *
      * @throws \Exception
      */

@@ -114,10 +114,7 @@ class Tracker extends AbstractTracker
      * This method exists for BC with the existing Pimcore\Google\Analytics implementation which supports to pass a config
      * object without a Site ID. Should be removed at a later point.
      *
-     * @param array $siteConfig
-     * @param SiteId|null $siteId
      *
-     * @return string
      */
     public function generateCodeForSiteConfig(array $siteConfig, SiteId $siteId = null): string
     {
@@ -185,7 +182,6 @@ class Tracker extends AbstractTracker
     }
 
     /**
-     * @param SiteId $siteId
      * @param array<string, mixed> $siteConfig
      *
      * @return array<string, CodeBlock>

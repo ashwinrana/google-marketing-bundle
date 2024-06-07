@@ -25,7 +25,6 @@ interface TrackerInterface
      * Generates code for a specific site. If no site is passed the current site will be
      * automatically resolved.
      *
-     * @param SiteId|null $siteId
      *
      * @return null|string Null if no tracking is configured
      */

@@ -36,10 +36,7 @@ class PortalController extends UserAwareController
     /**
      * @Route("/portlet-analytics-sites", name="pimcore_bundle_googlemarketing_portal_portletanalyticssites", methods={"GET"})
      *
-     * @param TranslatorInterface $translator
-     * @param SiteConfigProvider $siteConfigProvider
      *
-     * @return JsonResponse
      */
     public function portletAnalyticsSitesAction(
         TranslatorInterface $translator,

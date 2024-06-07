@@ -58,9 +58,6 @@ class CodeCollector
     /**
      * Adds additional code to the tracker
      *
-     * @param string $code
-     * @param string|null $block
-     * @param string $action
      * @param SiteId|null $siteId Restrict code part to a specific site
      */
     public function addCodePart(string $code, string $block = null, string $action = self::ACTION_APPEND, SiteId $siteId = null): void
@@ -108,9 +105,6 @@ class CodeCollector
     /**
      * Adds registered parts to a code block
      *
-     * @param SiteId $siteId
-     * @param CodeBlock $codeBlock
-     * @param string $block
      */
     public function enrichCodeBlock(SiteId $siteId, CodeBlock $codeBlock, string $block): void
     {

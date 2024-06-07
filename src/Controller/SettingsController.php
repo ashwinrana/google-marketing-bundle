@@ -35,9 +35,7 @@ class SettingsController extends ReportsControllerBase
     /**
      * @Route("/get", name="pimcore_bundle_googlemarketing_settings_get", methods={"GET"})
      *
-     * @param Request $request
      *
-     * @return JsonResponse
      */
     public function getAction(Request $request): JsonResponse
     {
@@ -55,10 +53,7 @@ class SettingsController extends ReportsControllerBase
     /**
      * @Route("/save", name="pimcore_bundle_googlemarketing_settings_save", methods={"PUT"})
      *
-     * @param Request $request
-     * @param ReportConfigWriter $configWriter
      *
-     * @return JsonResponse
      */
     public function saveAction(Request $request, ReportConfigWriter $configWriter): JsonResponse
     {

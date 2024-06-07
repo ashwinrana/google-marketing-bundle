@@ -24,9 +24,6 @@ use Pimcore\Bundle\GoogleMarketingBundle\Api\Api;
  */
 class Analytics extends AbstractAdapter
 {
-    /**
-     * {@inheritdoc}
-     */
     public function getData(?array $filters, ?string $sort, ?string $dir, ?int $offset, ?int $limit, array $fields = null, array $drillDownFilters = null): array
     {
         $this->setFilters($filters, $drillDownFilters);
@@ -50,9 +47,6 @@ class Analytics extends AbstractAdapter
         return [ 'data' => $data, 'total' => $results['totalResults'] ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getColumns(?\stdClass $configuration): array
     {
         $result = $this->getDataHelper();
@@ -106,11 +100,7 @@ class Analytics extends AbstractAdapter
     }
 
     /**
-     * @param array|null $fields
-     * @param array|null $drillDownFilters
-     * @param bool $useDimensionHandling
      *
-     * @return \Google\Service\Analytics\GaData
      *
      * @throws \Exception
      */
@@ -269,9 +259,6 @@ class Analytics extends AbstractAdapter
         return $date / 1000;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableOptions(array $filters, string $field, array $drillDownFilters): array
     {
         $this->setFilters($filters, $drillDownFilters);

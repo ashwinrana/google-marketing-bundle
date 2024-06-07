@@ -33,9 +33,7 @@ class SiteIdProvider
     /**
      * Resolve the site identifier for the given request
      *
-     * @param Request|null $request
      *
-     * @return SiteId
      */
     public function getForRequest(Request $request = null): SiteId
     {
@@ -54,9 +52,7 @@ class SiteIdProvider
     /**
      * Get a site id for a config key
      *
-     * @param string $configKey
      *
-     * @return SiteId
      */
     public function getSiteId(string $configKey): SiteId
     {
@@ -72,7 +68,6 @@ class SiteIdProvider
     /**
      * Get all available site ids
      *
-     * @param bool $includeMainDomain
      *
      * @return SiteId[]
      */
