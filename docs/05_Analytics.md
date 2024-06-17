@@ -1,9 +1,10 @@
 # Google Analytics
+
 In order to use Google Analytics you have to install the PimcoreGoogleMarketingBundle.
 Make sure to enable it in the bundles.php
 
 ## Disabling the Google Analytics Code
- 
+
 Injecting the code can be disabled by calling `disable()` in the `GoogleAnalyticsCodeListener`. For example, in a controller
 action in an autowired controller:
 
@@ -20,7 +21,7 @@ class TestController
     public function testAction(GoogleAnalyticsCodeListener $analyticsCodeListener): Response
     {
         $analyticsCodeListener->disable();
-        
+
         // ...
     }
 }
@@ -28,16 +29,14 @@ class TestController
 
 Of course you can also inject the listener into a custom service.
 
-
 ## Customizing the tracking code
 
 If you want to influence the generated tracking code, you have multiple possibilities to do so. The tracker code is divided
 into multiple code blocks which can be expanded and altered individually. As reference, please see:
 
-* the definition of available blocks in the [Tracker implementation](https://github.com/pimcore/google-marketing-bundle/blob/1.x/src/Tracker/Tracker.php#L32)
-* the [templates](https://github.com/ashwinrana/google-marketing-bundle/tree/1.x/templates/Analytics/Tracking/Google/Analytics)
-  which are rendered when generating the tracking code and which define where the content of each blocks is rendered
-  
+-   the definition of available blocks in the [Tracker implementation](https://github.com/pimcore/google-marketing-bundle/blob/1.x/src/Tracker/Tracker.php#L32)
+-   the [templates](https://github.com/pimcore/google-marketing-bundle/tree/1.x/templates/Analytics/Tracking/Google/Analytics)
+    which are rendered when generating the tracking code and which define where the content of each blocks is rendered
 
 ### Adding code to a block
 
@@ -59,22 +58,21 @@ class ContentController
     {
         // append a part to the default block
         $tracker->addCodePart('console.log("foo");');
-        
+
         // append a part to a specific block
         $tracker->addCodePart('console.log("foo");', Tracker::BLOCK_BEFORE_TRACK);
-        
+
         // prepend a part to a specific block
         $tracker->addCodePart('console.log("foo");', Tracker::BLOCK_AFTER_TRACK, true);
-        
+
         // you can also add the code only for a specific site
         // if you want to do so, you need to pass a SiteId object which identifies a tracking site
         $tracker->addCodePart('console.log("foo");', Tracker::BLOCK_AFTER_TRACK, true, SiteId::forMainDomain());
-        
+
         // ...
     }
 }
-``` 
-
+```
 
 ### Influencing generated code through the `CODE_TRACKING_DATA` event
 
@@ -113,7 +111,7 @@ class GoogleTrackingCodeListener implements EventSubscriberInterface
         // the data array is the data which will be passed to the template
         $data = $event->getData();
         $data['foo'] = 'bar';
-        
+
         $event->setData($data);
 
         // you can also completely replace the rendered template
